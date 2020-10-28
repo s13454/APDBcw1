@@ -8,9 +8,11 @@ namespace Cw1
     class Program
     {
         static async Task Main(string[] args)
+
         {
+            var url = "http://www.pja.edu.pl";
             var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync("http://www.pja.edu.pl");
+            var response = await httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {
